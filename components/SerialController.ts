@@ -103,6 +103,7 @@ export default class SerialController {
 
         content = content.replace(/\"/g, '\\\"');
         content = content.replace(/\\n/g, '\\\\n');
+        content = content.replace(/\\r/g, '\\\\r');
 
         // Send a keyboard interrupt
         await this.send(String.fromCharCode(3), true);
