@@ -1,0 +1,130 @@
+$platinum: #EBEBEB;
+$white: #FFFFFF;
+$black: #000000;
+$red: #ffa4a4;
+
+@mixin one-column-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  justify-items: center;
+  align-items: center;
+  text-align: center;
+  gap: 1rem;
+}
+
+@mixin one-row-grid {
+  display: grid;
+  grid-template-rows: 1fr;
+  justify-items: center;
+  align-items: center;
+  text-align: center;
+  gap: 1rem;
+}
+
+@mixin indicator {
+  padding: 1rem 0;
+  width: 100%;
+
+  p {
+    color: $black;
+  }
+
+}
+
+.main {
+  @include one-column-grid;
+  min-height: 100vh;
+  padding: 1rem;
+  background-color: $platinum;
+}
+
+.header {
+  @include one-column-grid;
+}
+
+
+.nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  width: 100%;
+  margin-top: 1rem;
+
+  li {
+    margin: 0 2rem;
+    list-style-type: none;
+    display: inline;
+  }
+}
+
+.section {
+  @include one-row-grid;
+}
+
+.Link {
+  text-decoration: underline;
+}
+
+.button {
+  background-color: $white;
+  color: $black;
+  text-decoration: none;
+  padding: 2rem;
+  aspect-ratio: 4/1;
+  border-radius: 10px;
+  border: none;
+  transition: ease-in-out 800ms;
+}
+
+.button:hover {
+  cursor: pointer;
+  background-color: $black;
+  color: $white;
+}
+
+.text {
+  padding: 2rem;
+  border-radius: 2rem;
+  border: none;
+  background-color: $white;
+  color: $black;
+  font-size: 12pt;
+  font-family: monospace;
+  display: flex;
+  flex-direction: column-reverse;
+  outline: none;
+}
+
+.select {
+  padding: 1rem;
+  font-size: 14pt;
+  border: none;
+  outline: none;
+  border-radius: 1rem;
+  background-color: $white;
+  color: $black;
+
+  .option {
+    padding: 1rem;
+    font-size: 14pt;
+  }
+}
+
+.inProgressIndicator {
+  @include indicator;
+  background-color: $black;
+
+  p {
+    color: $white;
+  }
+}
+
+.doneIndicator {
+  @include indicator;
+  background-color: $white;
+}
+
+.errorIndicator {
+  @include indicator;
+  background-color: $red;
+}

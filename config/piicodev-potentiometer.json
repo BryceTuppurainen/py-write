@@ -1,0 +1,11 @@
+{
+    "PiicoDev_Unified.py": {
+        "source": "https://raw.githubusercontent.com/CoreElectronics/CE-PiicoDev-Unified/main/PiicoDev_Unified.py"
+    },
+    "PiicoDev_Potentiometer.py": {
+        "source": "https://raw.githubusercontent.com/CoreElectronics/CE-PiicoDev-Potentiometer-MicroPython-Module/main/PiicoDev_Potentiometer.py"
+    },
+    "main.py": {
+        "content": "from PiicoDev_Potentiometer import PiicoDev_Potentiometer\nfrom PiicoDev_Unified import sleep_ms\nfrom machine import Pin, PWM\nled = PWM(Pin(25))\npot = PiicoDev_Potentiometer(minimum=0, maximum=65534) # Scale the pot to the duty cycle range for a Raspberry Pi Pico\nwhile True:\n    duty = round(pot.value)\n    led.duty_u16( duty )\n    sleep_ms(20)"
+    }
+}

@@ -1,0 +1,5 @@
+{
+"main.py": {
+        "content": "from machine import Pin\nfrom time import sleep\nled = Pin(25, Pin.OUT)\nwhile True:\n    led.toggle()\n    sleep(1)"
+    }
+}

@@ -1,0 +1,11 @@
+{
+    "PiicoDev_Unified.py" : {
+        "source": "https://raw.githubusercontent.com/CoreElectronics/CE-PiicoDev-Unified/main/PiicoDev_Unified.py"
+    },
+    "PiicoDev_SSD1306.py" : {
+        "source": "https://raw.githubusercontent.com/CoreElectronics/CE-PiicoDev-SSD1306-MicroPython-Module/main/PiicoDev_SSD1306.py"
+    },
+    "main.py" : {
+        "source": "https://raw.githubusercontent.com/CoreElectronics/CE-PiicoDev-SSD1306-MicroPython-Module/main/main.py"
+    }
+}
